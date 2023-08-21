@@ -57,10 +57,7 @@ export default function ChapterCard({item}) {
                 <ArrowRightIcon size="35" strokeWidth={2} color={themeColors.bgblack} />
               </TouchableOpacity>
             </View>
-            
-            
           </View>
-
       </View>
     
   )

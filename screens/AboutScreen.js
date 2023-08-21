@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 
 import bannerImage from '../assets/AboutUsBanner.png';
 import salikImage from '../assets/salik.png';
-import architImage from '../assets/archit.png';
+import architImage from '../assets/archit1.jpg';
 
 const AboutScreen = () => {
   return (
