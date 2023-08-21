@@ -38,7 +38,7 @@ export const coffeeItems = [
     stacks1: 'Research',
     stacks2: 'technology',
     stacks3: 'Community',
-    bgimage: require('../assets/images/2.png'),
+    bgimage: require('../assets/images/22.png'),
     image: require('../assets/logos/ieee.png'),
     desc: 'IEEE (Institute of Electrical and Electronics Engineers) is a global community of engineers, scientists, and technologynology enthusiasts. Join us to network and collaborate on cutting-edge projects.'},
   
@@ -52,7 +52,7 @@ export const coffeeItems = [
     stacks1: 'Mobile Apps',
     stacks2: 'Android',
     stacks3: 'IOS',
-    bgimage: require('../assets/images/1.png'),
+    bgimage: require('../assets/images/14.png'),
     image: require('../assets/logos/MobileTech.png'),
     desc: 'Mobile technologies Club is all about staying updated on the latest mobile app development trends, platforms, and tools.'},
     
@@ -95,7 +95,7 @@ export const coffeeItems = [
     stacks1: 'Google',
     stacks2: 'Hackathons',
     stacks3: 'Workshops',
-    bgimage: require('../assets/images/5.png'),
+    bgimage: require('../assets/images/21.png'),
     image: require('../assets/logos/GDSC.png'),
     desc: 'Google Developer Student Club is the official student community for Google Developers. Explore Google technologies, attend workshops, and participate in hackathons.'  },
   {
@@ -108,7 +108,7 @@ export const coffeeItems = [
     stacks1: 'Theories',
     stacks2: 'Profession',
     stacks3: 'technologynology',
-    bgimage: require('../assets/images/2.png'),
+    bgimage: require('../assets/images/22.png'),
     image: require('../assets/logos/ACM.png'),
     desc: 'ACM (Association for Computing Machinery) is dedicated to advancing computing as a science and profession. Join us to engage with computer science enthusiasts and explore the latest developments in the field.' },
   {
@@ -121,7 +121,7 @@ export const coffeeItems = [
     stacks1: 'Management',
     stacks2: 'Creativity',
     stacks3: 'Innovate',
-    bgimage: require('../assets/images/7.png'),
+    bgimage: require('../assets/images/19.png'),
     image: require('../assets/logos/PDT.png'),
     desc: 'PDT (Product Development Team) is all about turning ideas into reality. Join us if you are passionate about innovation and want to be part of creating exciting new products.' },
   {
@@ -134,7 +134,7 @@ export const coffeeItems = [
     stacks1: 'Research',
     stacks2: 'Community',
     stacks3: 'Indian Society',
-    bgimage: require('../assets/images/7.png'),
+    bgimage: require('../assets/images/19.png'),
     image: require('../assets/logos/CSI.png'),
     desc: 'CSI (Computer Society of India) is committed to promoting the advancement of computer science in India. Connect with like-minded individuals and contribute to the technology community.' }, 
   {
@@ -147,7 +147,7 @@ export const coffeeItems = [
     stacks1: 'Drones',
     stacks2: 'Photography',
     stacks3: 'Aerial technology',
-    bgimage: require('../assets/images/8.png'),
+    bgimage: require('../assets/images/23.png'),
     image: require('../assets/logos/drone.png'),
     desc: 'Bennett DroneSoc is your gateway to aerial technolology. Discover the art of flying drones, explore aerial photography, and learn about the latest drone innovations.' }, 
   {
@@ -160,7 +160,7 @@ export const coffeeItems = [
     stacks1: 'AI',
     stacks2: 'Machine Learning',
     stacks3: 'Neural Network',
-    bgimage: require('../assets/images/9.png'),
+    bgimage: require('../assets/images/24.png'),
     image: require('../assets/logos/bais.png'),
     desc: ' BIAS (Bennett Institute of AI Studies) is your gateway to the fascinating world of Artificial Intelligence (AI). Join us to understand AIs impact on various domains and dive deep into machine learning and neural networks.' },
   {
@@ -186,7 +186,7 @@ export const coffeeItems = [
     stacks1: 'Devops',
     stacks2: 'Learn Automation',
     stacks3: 'Deployment',
-    bgimage: require('../assets/images/7.png'),
+    bgimage: require('../assets/images/19.png'),
     image: require('../assets/logos/DEVOPS.png'),
     desc: 'Devops Club is your introduction to the world of DevOps (Development and Operations). Learn how to automate software development and deployment processes.' },
   {
@@ -199,7 +199,7 @@ export const coffeeItems = [
     stacks1: 'Front-End',
     stacks2: 'Back-End',
     stacks3: 'Web App',
-    bgimage: require('../assets/images/7.png'),
+    bgimage: require('../assets/images/19.png'),
     image: require('../assets/logos/FULLSTACK.png'),
     desc: 'Full Stack Club is your path to becoming a well-rounded web developer. Learn both front-end and back-end technologies to create complete web applications.' },
   {
@@ -230,7 +230,7 @@ export const coffeeItems = [
     desc: 'Geeks for Geeks BU is a club for coding and problem-solving enthusiasts. Sharpen your programming skills, tackle coding challenges, and collaborate on technology projects.' },
   {
     id: 16,
-    name: 'technotix',
+    name: 'Technotix',
     tag1: 'gadgets',
     tag2: 'discussion',
     tag3: 'technology',
@@ -290,7 +290,7 @@ export const coffeeItems = [
     stacks1: 'Robotics',
     stacks2: 'Automation',
     stacks3: 'Software',
-    bgimage: require('../assets/images/7.png'),
+    bgimage: require('../assets/images/19.png'),
     image: require('../assets/logos/RPA.png'),
     desc: 'RPA (Robotic Process Automation) Club is your introduction to the world of automation. Learn how to streamline repetitive tasks using software robots and make processes more efficient.' },
   {
@@ -303,7 +303,7 @@ export const coffeeItems = [
     stacks1: 'Visualization',
     stacks2: 'Processing',
     stacks3: 'Analysis',
-    bgimage: require('../assets/images/7.png'),
+    bgimage: require('../assets/images/19.png'),
     image: require('../assets/logos/data.png'),
     desc: 'Data Science Club at Bennett University is where data enthusiasts come together. We explore data analysis, visualization, and machine learning to derive meaningful insights from data.' },
   {
@@ -316,7 +316,7 @@ export const coffeeItems = [
     stacks1: 'Immersive',
     stacks2: 'Gaming',
     stacks3: 'technologynology',
-    bgimage: require('../assets/images/8.png'),
+    bgimage: require('../assets/images/23.png'),
     image: require('../assets/logos/alt.png'),
     desc: 'ALTReality is all about diving into the immersive worlds of Augmented Reality (AR) and Virtual Reality (VR). Explore the potential of AR and VR technologies, from gaming to real-world applications.' },
   
