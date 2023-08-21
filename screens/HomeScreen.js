@@ -59,8 +59,8 @@ export default function HomeScreen() {
         </View>
 
         */}
-        <View className="mx-5 shadow" style={{marginTop: height*0.09}}>
-         <Text style={{fontSize: 30}} className="font-bold text-neutral-700">Let's Discover</Text>
+        <View className="mx-5 shadow" style={{marginTop: height*0.04}}>
+         <Text style={{fontSize: 40}} className=" font-bold text-neutral-700">Let's Discover</Text>
 
         </View>
 
