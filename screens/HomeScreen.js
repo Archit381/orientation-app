@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, TextInput, FlatList, Dimensions, Platform } from 'react-native'
+import { View, Text, Image, TouchableOpacity, TextInput, FlatList,SectionList, Dimensions, Platform, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {themeColors} from '../theme';
@@ -8,6 +8,8 @@ import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
+
+
 
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
@@ -20,7 +22,7 @@ export default function HomeScreen() {
 
       <Image 
         source={require('../assets/images/bg1.jpg')} 
-        style={{height: height*0.2}} 
+        style={{height: height*0.2,  borderBottomLeftRadius: 50, borderBottomRightRadius: 50}} 
         className="w-full absolute -top-5 " />
       <SafeAreaView className={ios? '-mb-8': ''}>
 
@@ -39,7 +41,7 @@ export default function HomeScreen() {
           
         </View>
 
-        {/* Search Bar */}
+        {/* Search Bar 
 
         <View className="mx-5 shadow" style={{marginTop: height*0.06}}>
           <View className="flex-row items-center rounded-full p-1 bg-[#e6e6e6]">
@@ -52,9 +54,18 @@ export default function HomeScreen() {
           </View>
         </View>
 
+        */}
+        <View className="mx-5 shadow" style={{marginTop: height*0.09}}>
+         <Text style={{fontSize: 30}} className="font-bold text-neutral-700">Let's Discover</Text>
+
+        </View>
+
+    
+          
         {/* categories */}
 
         <View className="px-5 mt-6">
+          <ScrollView horizontal={false}></ScrollView>
           <FlatList 
             horizontal
             showsHorizontalScrollIndicator={false}

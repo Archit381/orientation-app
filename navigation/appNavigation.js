@@ -45,7 +45,7 @@ function HomeTabs(){
           
           borderRadius: 100,
           marginHorizontal: 20,
-          backgroundColor: themeColors.bgLight,
+          backgroundColor: themeColors.bgblue,
 
         },
         tabBarItemStyle: {
@@ -67,11 +67,11 @@ const menuIcons = (route, focused)=> {
   
 
   if (route.name === 'home') {
-    icon =  focused? <HomeSolid size="30" color={themeColors.bgLight} /> : <HomeOutline size="30" strokeWidth={2} color="white" />
+    icon =  focused? <HomeSolid size="30" color={themeColors.bgred} /> : <HomeOutline size="30" strokeWidth={2} color="white" />
   } else if (route.name === 'favourite') {
-    icon =  focused? <HeartSolid size="30" color={themeColors.bgLight} /> : <HeartOutline size="30" strokeWidth={2} color="white" />
+    icon =  focused? <HeartSolid size="30" color={themeColors.bgred} /> : <HeartOutline size="30" strokeWidth={2} color="white" />
   }else if(route.name==='cart'){
-    icon =  focused? <BagSolid size="30" color={themeColors.bgLight} /> : <BagOutline size="30" strokeWidth={2} color="white" />
+    icon =  focused? <BagSolid size="30" color={themeColors.bgred} /> : <BagOutline size="30" strokeWidth={2} color="white" />
   }
 
   
