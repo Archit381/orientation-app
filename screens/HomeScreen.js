@@ -52,12 +52,13 @@ export default function HomeScreen() {
             <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Bennett University</Text>
           </View>
         </View>
-        
+
         <View style={{ marginHorizontal: 16, shadowColor: 'rgba(0, 0, 0, 0.2)', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 1, shadowRadius: 2, marginTop: 16 }}>
           <Text style={{ fontSize: 40, fontWeight: 'bold', color: themeColors.textNeutral }}>Let's Discover</Text>
         </View>
 
         {/* Adding Categories */}
+          
         <View style={{ paddingHorizontal: 16, marginTop: 24, marginBottom: 50 }}>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             {categories.map(item => (
@@ -85,7 +86,7 @@ export default function HomeScreen() {
       </SafeAreaView>
 
       {/* Adding Chapters/Clubs cards */}
-      <View style={{ flex: 1, justifyContent: 'center', marginTop: ios ? 32 : 0 }}>
+      <View style={{ flex: 1, justifyContent: 'center', marginTop: ios ? 2 : 0 }}>
         <Carousel
           data={filteredCoffeeItems}
           renderItem={({ item }) => <ChapterCard item={item} />}

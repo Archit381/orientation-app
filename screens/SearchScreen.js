@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, FlatList, Dimensions, StyleSheet, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, FlatList, Dimensions, StyleSheet, Image, ScrollView } from 'react-native';
 import { coffeeItems } from '../constants';
 import { themeColors } from '../theme';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
@@ -11,14 +11,17 @@ export default function SearchScreen() {
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = () => {
-    const results = coffeeItems.filter(item =>
-      item.name.toLowerCase().includes(searchQuery.toLowerCase())
-      // item.tag1.toLowerCase().includes(searchQuery.toLowerCase()),
-      // item.tag2.toLowerCase().includes(searchQuery.toLowerCase()),
-      // item.tag3.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    const results = coffeeItems.filter(item => {
+      const itemName = item.name.toLowerCase();
+      const itemTags = [item.tag1, item.tag2, item.tag3, item.tag4].join(' ').toLowerCase();
+      const searchLower = searchQuery.toLowerCase();
+  
+      return itemName.includes(searchLower) || itemTags.includes(searchLower);
+    });
+  
     setSearchResults(results);
   };
+  
 
   return (
     <View className="mx-5 shadow" style={{marginTop: height*0.06}}>
@@ -38,7 +41,6 @@ export default function SearchScreen() {
           </TouchableOpacity>
         </View>
       </View>
-
       <FlatList
         data={searchResults}
         renderItem={({ item }) => (
@@ -53,7 +55,8 @@ export default function SearchScreen() {
             <Text style={styles.noResultsText}>No results found</Text>
           </View>
         )}
-      />
+        />
+      
     </View>
   );
 }

@@ -8,6 +8,7 @@ export const themeColors = {
    bgred: '#da2032',
    bggray: '#e6e6e6',
    bgblack: '#000000',
+   bgwhite: '#fefefe',
    text: '#3C2A21'
    
 }   

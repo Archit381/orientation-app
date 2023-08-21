@@ -14,7 +14,7 @@ export default function ChapterCard({item}) {
         style={{
           borderRadius: 40, 
           backgroundColor: themeColors.bggray, 
-          height: ios? height*0.4 : height*0.50, 
+          height: ios? height*0.5 : height*0.50, 
           width: width*0.65,
         }} 
         >
@@ -23,24 +23,24 @@ export default function ChapterCard({item}) {
           shadowColor: 'black',
           shadowRadius: 30,
           shadowOffset: {width: 0, height: 40},
-          shadowOpacity: 0.8,
+          shadowOpacity: 0.2,
           marginTop: ios? -(height*0.08): 15,
         }}
         className="flex-row justify-center">
           <Image 
             source={item.image} 
-            className="h-40 w-40" 
+            className={ios ? "h-40 w-40 top-20 " : "h-40 w-40"}
           />
         </View>
-          <View className={`px-5 flex-1 justify-between ${ios? 'mt-5': ''}`}>
+          <View className={`px-5 flex-1 justify-between ${ios? 'mt-20': ''}`}>
             <View className="space-y-3 mt-3">
               <Text className="text-3xl text-black font-semibold z-10">
                 {item.name}
               </Text>
             </View>
             <View style={{
-              backgroundColor: ios? themeColors.bgDark: 'transparent',
-              shadowColor: themeColors.bgDark,
+              backgroundColor: ios? 'transparent': 'transparent',
+              shadowColor: themeColors.bgwhite,
               shadowRadius: 25,
               shadowOffset: {width: 0, height: 40},
               shadowOpacity: 0.8,
@@ -52,7 +52,7 @@ export default function ChapterCard({item}) {
                 shadowColor: 'black',
                 shadowRadius: 40,
                 shadowOffset: {width: -20, height: -10},
-                shadowOpacity: 1,
+                shadowOpacity: 0.3,
               }} className="p-4 bg-white rounded-full">
                 <ArrowRightIcon size="35" strokeWidth={2} color={themeColors.bgblack} />
               </TouchableOpacity>

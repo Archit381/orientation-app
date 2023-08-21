@@ -31,7 +31,7 @@ export default function FavouriteScreen(props) {
         </View>
         <View 
           style={{
-            shadowColor: themeColors.bgDark,
+            shadowColor: themeColors.bggray,
             shadowRadius: 30,
             shadowOffset: {width: 0, height: 30},
             shadowOpacity: 0.9,
