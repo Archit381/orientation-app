@@ -37,7 +37,6 @@ export default function AppNavigation() {
 function HomeTabs(){
   return (
     <Tab.Navigator screenOptions={({ route }) => ({
-        backgroundColor:'transparent',
         headerShown: false,
         tabBarShowLabel: false,
         backgroundColor: 'transparent',

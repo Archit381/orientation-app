@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
-const SearchScreen = () => {
-  return (
-    <View>
-      <Text>SearchScreen</Text>
-    </View>
-  )
-}
-
-export default SearchScreen
-
-const styles = StyleSheet.create({})
-=======
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, FlatList, Dimensions, StyleSheet, Image } from 'react-native';
 import { coffeeItems } from '../constants';
@@ -141,4 +125,3 @@ const styles = StyleSheet.create({
     color: 'gray',
   },
 });
->>>>>>> second_branch
