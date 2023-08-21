@@ -5,22 +5,26 @@
 export const categories = [
   {
     id: 1,
-    title: "Engineering",
+    title: "All",
   },
   {
     id: 2,
-    title: "Technology",
+    title: "Engineering",
   },
   {
     id: 3,
-    title: "Programming",
+    title: "Technology",
   },
   {
     id: 4,
-    title: "Development",
+    title: "Programming",
   },
   {
     id: 5,
+    title: "Development",
+  },
+  {
+    id: 6,
     title: "Gaming",
   },
 ]
@@ -34,6 +38,10 @@ export const coffeeItems = [
     tag1: 'engineering',
     tag2: 'technology',
     tag3: 'community',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Research',
     stacks2: 'technology',
     stacks3: 'Community',
@@ -43,10 +51,18 @@ export const coffeeItems = [
   
   {
     id: 2,
+<<<<<<< HEAD
     name: 'Mobile technologies',
     tag1: 'mobile',
     tag2: 'technology',
     tag3: 'apps',
+=======
+    name: 'Mobile Technologies',
+    tag1: 'mobile',
+    tag2: 'technology',
+    tag3: 'apps',
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Mobile Apps',
     stacks2: 'Android',
     stacks3: 'IOS',
@@ -61,6 +77,10 @@ export const coffeeItems = [
     tag1: 'programming',
     tag2: 'development',
     tag3: 'challenges',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Competetions',
     stacks2: 'Challenges',
     stacks3: 'Coding',
@@ -74,6 +94,10 @@ export const coffeeItems = [
     tag1: 'engineering',
     tag2: 'algorithems',
     tag3: 'mathematics',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Maths',
     stacks2: 'Algorithms',
     stacks3: 'Logic Building',
@@ -87,6 +111,10 @@ export const coffeeItems = [
     tag1: 'development',
     tag2: 'community',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Google',
     stacks2: 'Hackathons',
     stacks3: 'Workshops',
@@ -99,6 +127,10 @@ export const coffeeItems = [
     tag1: 'development',
     tag2: 'technology',
     tag3: 'profession',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Theories',
     stacks2: 'Profession',
     stacks3: 'technologynology',
@@ -111,6 +143,10 @@ export const coffeeItems = [
     tag1: 'innovation',
     tag2: 'creativity',
     tag3: 'engineering',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Management',
     stacks2: 'Creativity',
     stacks3: 'Innovate',
@@ -123,6 +159,10 @@ export const coffeeItems = [
     tag1: 'computerscience',
     tag2: 'technology',
     tag3: 'india',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Research',
     stacks2: 'Community',
     stacks3: 'Indian Society',
@@ -135,6 +175,10 @@ export const coffeeItems = [
     tag1: 'drones',
     tag2: 'technology',
     tag3: 'photography',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Drones',
     stacks2: 'Photography',
     stacks3: 'Aerial technology',
@@ -147,6 +191,10 @@ export const coffeeItems = [
     tag1: 'ai',
     tag2: 'ml',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'AI',
     stacks2: 'Machine Learning',
     stacks3: 'Neural Network',
@@ -159,6 +207,10 @@ export const coffeeItems = [
     tag1: 'quantum',
     tag2: 'technology',
     tag3: 'science',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Science',
     stacks2: 'Supercomputers',
     stacks3: 'Research',
@@ -171,6 +223,10 @@ export const coffeeItems = [
     tag1: 'devops',
     tag2: 'automation',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Devops',
     stacks2: 'Learn Automation',
     stacks3: 'Deployment',
@@ -183,6 +239,10 @@ export const coffeeItems = [
     tag1: 'web',
     tag2: 'fullstack',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Front-End',
     stacks2: 'Back-End',
     stacks3: 'Web App',
@@ -195,6 +255,10 @@ export const coffeeItems = [
     tag1: 'engineering',
     tag2: 'inclusivity',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Diversity',
     stacks2: 'Inclusivity',
     stacks3: 'Community',
@@ -207,6 +271,10 @@ export const coffeeItems = [
     tag1: 'coding',
     tag2: 'programming',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Problem Solving',
     stacks2: 'Projects',
     stacks3: 'Challenges',
@@ -215,22 +283,38 @@ export const coffeeItems = [
     desc: 'Geeks for Geeks BU is a club for coding and problem-solving enthusiasts. Sharpen your programming skills, tackle coding challenges, and collaborate on technology projects.' },
   {
     id: 16,
+<<<<<<< HEAD
     name: 'technologynotix',
     tag1: 'gadgets',
     tag2: 'discussion',
     tag3: 'technology',
+=======
+    name: 'technotix',
+    tag1: 'gadgets',
+    tag2: 'discussion',
+    tag3: 'technology',
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Discussion',
     stacks2: 'technology Trends',
     stacks3: 'Research',
     bgimage: require('../assets/images/12.png'),
     image: require('../assets/logos/technotics.png'),
+<<<<<<< HEAD
     desc: 'technologynotix is the club for technology enthusiasts. Stay updated on the latest technology trends, gadgets, and breakthroughs. Engage in technology discussions and hands-on projects.' },
+=======
+    desc: 'technotix is the club for technology enthusiasts. Stay updated on the latest technology trends, gadgets, and breakthroughs. Engage in technology discussions and hands-on projects.' },
+>>>>>>> second_branch
   {
     id: 17,
     name: 'Indian Blockchain Fraternity',
     tag1: 'blockchain',
     tag2: 'cryptocurrency',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Smart Contracts',
     stacks2: 'Cryptocurrency',
     stacks3: 'Research',
@@ -243,6 +327,10 @@ export const coffeeItems = [
     tag1: 'gaming',
     tag2: 'esports',
     tag3: 'entertainment',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Gaming',
     stacks2: 'Esports',
     stacks3: 'Game Design',
@@ -255,6 +343,10 @@ export const coffeeItems = [
     tag1: 'cybersecurity',
     tag2: 'security',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Ethical Hacking',
     stacks2: 'Security',
     stacks3: 'Cyber',
@@ -267,6 +359,10 @@ export const coffeeItems = [
     tag1: 'automation',
     tag2: 'robots',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Robotics',
     stacks2: 'Automation',
     stacks3: 'Software',
@@ -279,6 +375,10 @@ export const coffeeItems = [
     tag1: 'visualization',
     tag2: 'data',
     tag3: 'technology',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Visualization',
     stacks2: 'Processing',
     stacks3: 'Analysis',
@@ -291,6 +391,10 @@ export const coffeeItems = [
     tag1: 'ar',
     tag2: 'vr',
     tag3: 'gaming',
+<<<<<<< HEAD
+=======
+    tag4: 'all',
+>>>>>>> second_branch
     stacks1: 'Immersive',
     stacks2: 'Gaming',
     stacks3: 'technologynology',

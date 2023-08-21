@@ -40,6 +40,7 @@ function HomeTabs(){
         backgroundColor:'transparent',
         headerShown: false,
         tabBarShowLabel: false,
+        backgroundColor: 'transparent',
         tabBarIcon: ({ focused }) => menuIcons(route, focused),
         tabBarStyle: {
           marginBottom: 20,
