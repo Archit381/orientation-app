@@ -5,10 +5,10 @@ import HomeScreen from '../screens/HomeScreen';
 import { Dimensions, LogBox, Platform, Text, View } from 'react-native';
 import ProductScreen from '../screens/ProductScreen';
 import { themeColors } from '../theme';
-
+import { MagnifyingGlassCircleIcon, MagnifyingGlassIcon, MagnifyingGlassPlusIcon, ArchiveBoxIcon } from 'react-native-heroicons/outline'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {HomeIcon as HomeOutline, HeartIcon as HeartOutline, ShoppingBagIcon as BagOutline } from 'react-native-heroicons/outline';
-import {HomeIcon as HomeSolid, HeartIcon as HeartSolid, ShoppingBagIcon as BagSolid} from 'react-native-heroicons/solid';
+import {HomeIcon as HomeSolid, HeartIcon as HeartSolid, ShoppingBagIcon as BagSolid, DocumentMagnifyingGlassIcon} from 'react-native-heroicons/solid';
 
 
 const Stack = createNativeStackNavigator();
@@ -56,8 +56,8 @@ function HomeTabs(){
       
       >
       <Tab.Screen name="home" component={HomeScreen} />
-      <Tab.Screen name="favourite" component={HomeScreen} />
-      <Tab.Screen name="cart" component={HomeScreen} />
+      <Tab.Screen name="search" component={HomeScreen} />
+      <Tab.Screen name="info" component={HomeScreen} />
     </Tab.Navigator>
   )
 }
@@ -68,10 +68,10 @@ const menuIcons = (route, focused)=> {
 
   if (route.name === 'home') {
     icon =  focused? <HomeSolid size="30" color={themeColors.bgred} /> : <HomeOutline size="30" strokeWidth={2} color="white" />
-  } else if (route.name === 'favourite') {
-    icon =  focused? <HeartSolid size="30" color={themeColors.bgred} /> : <HeartOutline size="30" strokeWidth={2} color="white" />
-  }else if(route.name==='cart'){
-    icon =  focused? <BagSolid size="30" color={themeColors.bgred} /> : <BagOutline size="30" strokeWidth={2} color="white" />
+  } else if (route.name === 'search') {
+    icon =  focused? <MagnifyingGlassIcon size="30" color={themeColors.bgred} /> : <MagnifyingGlassIcon size="30" strokeWidth={2} color="white" />
+  }else if(route.name==='info'){
+    icon =  focused? <ArchiveBoxIcon size="30" color={themeColors.bgred} /> : <ArchiveBoxIcon size="30" strokeWidth={2} color="white" />
   }
 
   
