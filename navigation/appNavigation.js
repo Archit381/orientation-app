@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
 import { Dimensions, LogBox, Platform, Text, View } from 'react-native';
 import ProductScreen from '../screens/ProductScreen';
+import SearchScreen from '../screens/SearchScreen';
+import AboutScreen from '../screens/AboutScreen';
 import { themeColors } from '../theme';
 import { MagnifyingGlassCircleIcon, MagnifyingGlassIcon, MagnifyingGlassPlusIcon, ArchiveBoxIcon } from 'react-native-heroicons/outline'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -22,7 +24,7 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
-        contentStyle: {backgroundColor: 'white'}
+        contentStyle: {backgroundColor: 'transparent'}
       }}>
         <Stack.Screen name="Home" options={{headerShown: false}} component={HomeTabs} />
         <Stack.Screen name="Product" options={{headerShown: false}} component={ProductScreen} />
@@ -35,6 +37,7 @@ export default function AppNavigation() {
 function HomeTabs(){
   return (
     <Tab.Navigator screenOptions={({ route }) => ({
+        backgroundColor:'transparent',
         headerShown: false,
         tabBarShowLabel: false,
         tabBarIcon: ({ focused }) => menuIcons(route, focused),
@@ -46,6 +49,7 @@ function HomeTabs(){
           borderRadius: 100,
           marginHorizontal: 20,
           backgroundColor: themeColors.bgblue,
+          
 
         },
         tabBarItemStyle: {
@@ -56,8 +60,8 @@ function HomeTabs(){
       
       >
       <Tab.Screen name="home" component={HomeScreen} />
-      <Tab.Screen name="search" component={HomeScreen} />
-      <Tab.Screen name="info" component={HomeScreen} />
+      <Tab.Screen name="search" component={SearchScreen} /> 
+      <Tab.Screen name="info" component={AboutScreen} />
     </Tab.Navigator>
   )
 }
