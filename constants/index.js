@@ -152,7 +152,7 @@ export const coffeeItems = [
     desc: 'Bennett DroneSoc is your gateway to aerial technolology. Discover the art of flying drones, explore aerial photography, and learn about the latest drone innovations.' }, 
   {
     id: 10,
-    name: 'Bennett Institute of AI Studies (BAIS)',
+    name: 'Bennett Institute of AI Studies (BIAS)',
     tag1: 'ai',
     tag2: 'ml',
     tag3: 'technology',
