@@ -16,8 +16,8 @@ export default function HomeScreen() {
   const [activeCategory, setActiveCategory] = useState(1);
   const [filteredCoffeeItems, setFilteredCoffeeItems] = useState([]);
   const navigation = useNavigation();
- 
-  // Update filteredCoffeeItems when activeCategory changes
+  
+  // Updating club names when category is changing
   
   useEffect(() => {
     const filteredItems = coffeeItems.filter(item => {
@@ -65,10 +65,7 @@ export default function HomeScreen() {
                   paddingVertical: 8,
                   borderRadius: 24,
                   marginRight: 8,
-                  shadowColor: 'rgba(0, 0, 0, 0.2)',
-                  shadowOffset: { width: 0, height: 2 },
-                  shadowOpacity: 1,
-                  shadowRadius: 2,
+                  
                 }}
               >
                 <Text style={{ fontWeight: 'bold', color: item.id === activeCategory ? 'white' : 'gray' }}>{item.title}</Text>

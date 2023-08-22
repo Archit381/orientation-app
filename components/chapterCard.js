@@ -1,12 +1,12 @@
 import { View, Text, Image, TouchableOpacity, TouchableWithoutFeedback, Dimensions, Platform } from 'react-native'
-import React from 'react'
+import React, {memo} from 'react'
 import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native'
 import { StarIcon } from 'react-native-heroicons/solid';
 import { PlusIcon,ArrowRightIcon } from 'react-native-heroicons/outline';
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
-export default function ChapterCard({item}) {
+function ChapterCard({item}) {
   const navigation = useNavigation();
   return (
 
@@ -20,10 +20,6 @@ export default function ChapterCard({item}) {
         >
         <View 
         style={{
-          shadowColor: 'black',
-          shadowRadius: 30,
-          shadowOffset: {width: 0, height: 40},
-          shadowOpacity: 0.2,
           marginTop: ios? -(height*0.08): 15,
         }}
         className="flex-row justify-center">
@@ -40,19 +36,13 @@ export default function ChapterCard({item}) {
             </View>
             <View style={{
               backgroundColor: ios? 'transparent': 'transparent',
-              shadowColor: themeColors.bgwhite,
-              shadowRadius: 25,
-              shadowOffset: {width: 0, height: 40},
-              shadowOpacity: 0.8,
+              
             }} className="flex-row  items-center space-x-10 mb-5">
               <Text className="px-4 text-black font-bold text-lg" >Learn More</Text>
               <TouchableOpacity 
               onPress={()=> navigation.navigate('Product', {...item})}
               style={{
-                shadowColor: 'black',
-                shadowRadius: 40,
-                shadowOffset: {width: -20, height: -10},
-                shadowOpacity: 0.3,
+                
               }} className="p-4 bg-white rounded-full">
                 <ArrowRightIcon size="35" strokeWidth={2} color={themeColors.bgblack} />
               </TouchableOpacity>
@@ -62,3 +52,4 @@ export default function ChapterCard({item}) {
     
   )
 }
+export default memo(ChapterCard);
