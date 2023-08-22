@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, TouchableOpacity, TextInput, FlatList, Dimensions, Platform, ScrollView } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Dimensions, Platform, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { themeColors } from '../theme';
 import { StatusBar } from 'expo-status-bar';
@@ -35,15 +35,11 @@ export default function HomeScreen() {
     <View style={{ flex: 1, backgroundColor: 'white' }}>
       <StatusBar />
 
-      <Image 
-        source={require('../assets/images/bg1.jpg')} 
-        style={{height: height*0.9,  borderBottomLeftRadius: 60, borderBottomRightRadius: 60}} 
-        className="w-full absolute -top-5 " 
-        blurRadius={15}/>
-
+      
       <SafeAreaView style={ios ? { marginBottom: -8 } : {}}>
 
         {/* University Logo and Name */}
+
         <View className="mx-4 flex-row  items-center space-x-20">
           <Image source={require('../assets/images/uni_logo.png')} 
             className="h-11 w-9" />

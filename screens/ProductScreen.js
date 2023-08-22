@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, Dimensions, Platform } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Dimensions,StyleSheet, Platform,ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { StatusBar } from 'expo-status-bar';
@@ -17,6 +17,7 @@ export default function FavouriteScreen(props) {
   const [size, setSize] = useState('small');
   const navigation = useNavigation();
   return (
+    <ScrollView style={styles.container} >
     <View className="flex-1">
       <StatusBar style="light" />
       <Image
@@ -49,24 +50,18 @@ export default function FavouriteScreen(props) {
         </View>
         <View className="px-4 space-y-2">
           <View className="flex-row justify-between">
-            <TouchableOpacity 
-             onPress={()=> setSize('small')}
-             style={{backgroundColor: size=='small'? themeColors.bgblue: 'rgba(0,0,0,0.07)'}} 
-             className="p-3 px-8 rounded-full">
-              <Text className={size=='small'? "text-white": "text-gray-700"}>{item.stacks1}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity 
-             onPress={()=> setSize('medium')}
-             style={{backgroundColor: size=='medium'? themeColors.bgblue: 'rgba(0,0,0,0.07)'}}
+            <View style={{backgroundColor: item.accent}} 
+             className="p-3 px-4 rounded-full">
+              <Text className={"text-white"}>{item.stacks1}</Text>
+            </View>
+            <View style={{backgroundColor: item.accent}} 
               className="p-3 px-8 rounded-full">
-              <Text className={size=='medium'? "text-white": "text-gray-700"}>{item.stacks2}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity 
-             onPress={()=> setSize('large')}
-             style={{backgroundColor: size=='large'? themeColors.bgblue: 'rgba(0,0,0,0.07)'}} 
+              <Text className={"text-white"}>{item.stacks2}</Text>
+            </View>
+            <View style={{backgroundColor: item.accent}} 
              className="p-3 px-8 rounded-full">
-              <Text className={size=='large'? "text-white": "text-gray-700"}>{item.stacks3}</Text>
-            </TouchableOpacity>
+              <Text className={"text-white"}>{item.stacks3}</Text>
+            </View>
           </View>
         </View>
 
@@ -82,6 +77,8 @@ export default function FavouriteScreen(props) {
       <View className="px-4 space-y-2">
           <Text style={{color: themeColors.text}} className="text-lg font-bold">Catch the latest updates, follow us!</Text>
           
+
+          
         </View>
       <View className={`space-y-3 ${ios? 'mb-6': 'mb-3'}`}>
           <View className="flex-row justify-between items-center px-4 mb-2">
@@ -96,5 +93,11 @@ export default function FavouriteScreen(props) {
         
       
     </View>
+    </ScrollView>
   )
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+});
