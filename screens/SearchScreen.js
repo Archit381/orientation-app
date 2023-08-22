@@ -3,12 +3,14 @@ import { View, Text, TextInput, TouchableOpacity, FlatList, Dimensions, StyleShe
 import { coffeeItems } from '../constants';
 import { themeColors } from '../theme';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
+import { useNavigation } from '@react-navigation/native'
 
 const { width, height } = Dimensions.get('window');
 
 export default function SearchScreen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const navigation = useNavigation();
 
   const handleSearch = () => {
     const results = coffeeItems.filter(item => {
@@ -22,9 +24,8 @@ export default function SearchScreen() {
     setSearchResults(results);
   };
   
-
   return (
-    <View className="mx-5 shadow" style={{marginTop: height*0.06}}>
+    <View className="mx-5 " style={{marginTop: height*0.06 }}>
       <View className="flex-row items-center rounded-full p-1 bg-[#e6e6e6]">
         <View style={styles.searchInputContainer}>
           <TextInput
@@ -44,15 +45,17 @@ export default function SearchScreen() {
       <FlatList
         data={searchResults}
         renderItem={({ item }) => (
-          <View style={styles.resultCard}>
+        <TouchableOpacity onPress={() => navigation.navigate('Product', {...item})}>  
+          <View style={styles.resultCard}>            
             <Image source={item.image} style={styles.clubLogo} />
-            <Text style={styles.resultTitle}>{item.name}</Text>
+            <Text style={styles.resultTitle}>{item.name}</Text> 
           </View>
+        </TouchableOpacity>  
         )}
         keyExtractor={item => item.id.toString()}
         ListEmptyComponent={() => (
           <View style={styles.noResults}>
-            <Text style={styles.noResultsText}>No results found</Text>
+            {/*<Text style={styles.noResultsText}>No results found</Text>*/}
           </View>
         )}
         />

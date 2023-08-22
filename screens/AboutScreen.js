@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
-
+import { StyleSheet,TouchableOpacity, Text, View, ScrollView, Image } from 'react-native';
+import { ArrowLeftCircleIcon, MinusIcon, PlusIcon } from 'react-native-heroicons/outline';
 
 import bannerImage from '../assets/AboutUsBanner.png';
 import salikImage from '../assets/salik.png';
@@ -10,8 +10,8 @@ const AboutScreen = () => {
   return (
     <ScrollView style={styles.container} >
 
+      
       <Image source={bannerImage} style={styles.headerBanner} />
-
 
       <View style={styles.section}>
         <Text style={styles.heading}>About Us</Text>

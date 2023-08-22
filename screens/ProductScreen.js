@@ -85,7 +85,7 @@ export default function FavouriteScreen(props) {
               <View className="flex-row items-center space-x-1">
                 
               </View>
-              
+
           </View>
 
         

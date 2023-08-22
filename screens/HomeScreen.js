@@ -16,7 +16,7 @@ export default function HomeScreen() {
   const [activeCategory, setActiveCategory] = useState(1);
   const [filteredCoffeeItems, setFilteredCoffeeItems] = useState([]);
   const navigation = useNavigation();
-
+ 
   // Update filteredCoffeeItems when activeCategory changes
   
   useEffect(() => {
@@ -34,18 +34,16 @@ export default function HomeScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
       <StatusBar />
-
-      
       <SafeAreaView style={ios ? { marginBottom: -8 } : {}}>
 
         {/* University Logo and Name */}
 
         <View className="mx-4 flex-row  items-center space-x-20">
           <Image source={require('../assets/images/uni_logo.png')} 
-            className="h-11 w-9" />
+            className="h-11 w-9 top-2" />
           <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 8 }}>
-            <MapPinIcon size={25} color={themeColors.bgred} />
-            <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Bennett University</Text>
+            <MapPinIcon size={27} color={themeColors.bgred} />
+            <Text style={{ fontWeight: 'bold', fontSize: 18 }}>Bennett University</Text>
           </View>
         </View>
 
