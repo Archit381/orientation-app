@@ -29,7 +29,7 @@ export const categories = [
 
 
 
-export const coffeeItems = [
+export const clubItems = [
   {
     id: 1,
     name: 'IEEE',
@@ -58,9 +58,11 @@ export const coffeeItems = [
     accent: '#cb6ce6',
     bgimage: require('../assets/images/14.png'),
     image: require('../assets/logos/MobileTech.png'),
-    desc: 'Mobile technologies Club is all about staying updated on the latest mobile app development trends, platforms, and tools.'},
-    
-  
+    desc: 'Mobile technologies Club is all about staying updated on the latest mobile app development trends, platforms, and tools.',
+    pic: 'no',
+    img1: require('../assets/events/soon.png'),
+    img2: require('../assets/events/soon.png'),
+    img3: require('../assets/events/soon.png')},
   {
     id: 3,
     name: 'CodeChef',
@@ -89,8 +91,16 @@ export const coffeeItems = [
     accent: '#616161',
     bgimage: require('../assets/images/4.png'),
     image: require('../assets/logos/atc.png'),
-    desc: 'Alan Turing Club is a gathering of mathematics and computer science enthusiasts. Explore complex algorithms, mathematical concepts, and computational theories.' },
-  
+    desc: 'Alan Turing Club aims to cultivate a community of exceptional coders, providing them with comprehensive resources and training to prepare for top companies. Our exclusive interactions with renowned tech experts ensure a holistic and transformative learning journey' ,
+    vis: 'At Alan Turing Club, we aim to cultivate elite coders. We nurture potential, enhance skills, and prep for MAANG and Fortune 500 gigs. Our commitment includes resources, tests, and guru interactions for a transformative learning journey',
+    pic: 'yes',
+    cname: 'Udit Chaudhary',
+    vname: 'Akshay Sinha',
+    chair: require('../assets/team/atc.jpg'),
+    vc: require('../assets/team/atcv.jpg'),
+    img1: require('../assets/events/atc1.jpeg'),
+    img2: require('../assets/events/atc2.jpeg'),
+    img3: require('../assets/events/atc3.png')},
   {
     id: 5,
     name: 'Google Developer Student Club',
@@ -244,7 +254,16 @@ export const coffeeItems = [
     accent: '#348c3f',
     bgimage: require('../assets/images/11.png'),
     image: require('../assets/logos/gfg.png'),
-    desc: 'Geeks for Geeks BU is a club for coding and problem-solving enthusiasts. Sharpen your programming skills, tackle coding challenges, and collaborate on technology projects.' },
+    cname: 'Neze Papreja',
+    vname: 'Anushka Sharma',
+    chair: require('../assets/team/gfg.jpg'),
+    vc: require('../assets/team/gfgv.jpg'),
+    desc: 'GeeksforGeeks: Student tech club. Boost skills, teamwork on projects, code battles, and knowledge-sharing in computer science and programming. Join the passionate learning community!' ,
+    vis: 'GeeksforGeeks: Learn, Practice, Excel. We empower programmers worldwide with top-notch courses, fostering a global learning community. Unleash your potential, stay ahead in tech, make your mark.',
+    pic: 'yes',
+    img1: require('../assets/events/gfg3.jpg'),
+    img2: require('../assets/events/gfg1.jpg'),
+    img3: require('../assets/events/gfg2.jpg')}, 
   {
     id: 16,
     name: 'Technotix',
@@ -308,14 +327,24 @@ export const coffeeItems = [
     tag2: 'robots',
     tag3: 'technology',
     tag4: 'all',
-    stacks1: 'Robotics',
-    stacks2: 'Automation',
-    stacks3: 'Software',
+    stacks1: 'Automate',
+    stacks2: 'Innovate',
+    stacks3: 'Collaborate',
     accent: '#5271ff',
     bgimage: require('../assets/images/19.png'),
     image: require('../assets/logos/RPA.png'),
-    desc: 'RPA (Robotic Process Automation) Club is your introduction to the world of automation. Learn how to streamline repetitive tasks using software robots and make processes more efficient.' },
-  {
+    cname: 'Anshuman Pandey',
+    vname: 'Krishna Singh',
+    chair: require('../assets/team/rpa.jpg'),
+    vc: require('../assets/team/rpav.jpg'),
+    desc: 'RPA is a tech marvel automating tasks, like virtual assistants. Our goal: simplify, give hands-on experience, and boost innovation. We will decode bots, streamline processes, and enhance efficiency together.' ,
+    vis: 'Imagine our club as an innovation hub for RPA enthusiasts. We are not just about efficiency; we are creating a world where tasks are automated, freeing creativity. Join us in shaping a future of human-robot collaboration.',
+    pic: 'no',
+    img1: require('../assets/events/soon.png'),
+    img2: require('../assets/events/soon.png'),
+    img3: require('../assets/events/soon.png')},
+    
+    {
     id: 21,
     name: 'Data Science',
     tag1: 'visualization',

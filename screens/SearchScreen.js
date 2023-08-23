@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, FlatList, Dimensions, StyleSheet, Image, ScrollView } from 'react-native';
-import { coffeeItems } from '../constants';
+import { clubItems } from '../constants';
 import { themeColors } from '../theme';
-import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
+import { MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native'
 
 const { width, height } = Dimensions.get('window');
@@ -13,7 +13,7 @@ export default function SearchScreen() {
   const navigation = useNavigation();
 
   const handleSearch = () => {
-    const results = coffeeItems.filter(item => {
+    const results = clubItems.filter(item => { 
       const itemName = item.name.toLowerCase();
       const itemTags = [item.tag1, item.tag2, item.tag3, item.tag4].join(' ').toLowerCase();
       const searchLower = searchQuery.toLowerCase();

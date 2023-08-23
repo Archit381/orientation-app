@@ -1,9 +1,9 @@
-import { View, Text, Image, TouchableOpacity, TouchableWithoutFeedback, Dimensions, Platform } from 'react-native'
+import { View, Text, Image, TouchableOpacity, Dimensions, Platform } from 'react-native'
 import React, {memo} from 'react'
 import { themeColors } from '../theme'
 import { useNavigation } from '@react-navigation/native'
-import { StarIcon } from 'react-native-heroicons/solid';
-import { PlusIcon,ArrowRightIcon } from 'react-native-heroicons/outline';
+
+import { ArrowRightIcon } from 'react-native-heroicons/outline';
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
 function ChapterCard({item}) {

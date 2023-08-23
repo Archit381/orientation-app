@@ -2,15 +2,15 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
-import { Dimensions, LogBox, Platform, Text, View } from 'react-native';
+import { LogBox, Platform, View } from 'react-native';
 import ProductScreen from '../screens/ProductScreen';
 import SearchScreen from '../screens/SearchScreen';
 import AboutScreen from '../screens/AboutScreen';
 import { themeColors } from '../theme';
-import { MagnifyingGlassCircleIcon, MagnifyingGlassIcon, MagnifyingGlassPlusIcon, ArchiveBoxIcon } from 'react-native-heroicons/outline'
+import { MagnifyingGlassIcon, ArchiveBoxIcon } from 'react-native-heroicons/outline'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {HomeIcon as HomeOutline, HeartIcon as HeartOutline, ShoppingBagIcon as BagOutline } from 'react-native-heroicons/outline';
-import {HomeIcon as HomeSolid, HeartIcon as HeartSolid, ShoppingBagIcon as BagSolid, DocumentMagnifyingGlassIcon} from 'react-native-heroicons/solid';
+import {HomeIcon as HomeOutline, ShoppingBagIcon as BagOutline } from 'react-native-heroicons/outline';
+import {HomeIcon as HomeSolid, ShoppingBagIcon as BagSolid, DocumentMagnifyingGlassIcon} from 'react-native-heroicons/solid';
 
 
 const Stack = createNativeStackNavigator();
@@ -65,6 +65,7 @@ function HomeTabs(){
     </Tab.Navigator>
   )
 }
+
 
 const menuIcons = (route, focused)=> {
   let icon;

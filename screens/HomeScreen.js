@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, Dimensions, Platform, ScrollView }
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { themeColors } from '../theme';
 import { StatusBar } from 'expo-status-bar';
-import { categories, coffeeItems } from '../constants';
+import { categories, clubItems } from '../constants';
 import Carousel from 'react-native-snap-carousel';
 import { MapPinIcon } from 'react-native-heroicons/solid';
 import ChapterCard from '../components/chapterCard';
@@ -14,13 +14,13 @@ const ios = Platform.OS == 'ios';
 
 export default function HomeScreen() {
   const [activeCategory, setActiveCategory] = useState(1);
-  const [filteredCoffeeItems, setFilteredCoffeeItems] = useState([]);
+  const [filteredClubItems, setFilteredClubItems] = useState([]);
   const navigation = useNavigation();
   
   // Updating club names when category is changing
   
   useEffect(() => {
-    const filteredItems = coffeeItems.filter(item => {
+    const filteredItems = clubItems.filter(item => {
       return (
         item.tag1 === categories[activeCategory - 1].title.toLowerCase() ||
         item.tag2 === categories[activeCategory - 1].title.toLowerCase() ||
@@ -28,7 +28,7 @@ export default function HomeScreen() {
         item.tag4 === categories[activeCategory - 1].title.toLowerCase()
       );
     });
-    setFilteredCoffeeItems(filteredItems);
+    setFilteredClubItems(filteredItems);
   }, [activeCategory]);
 
   return (
@@ -64,6 +64,7 @@ export default function HomeScreen() {
                   paddingHorizontal: 16,
                   paddingVertical: 8,
                   borderRadius: 24,
+                  
                   marginRight: 8,
                   
                 }}
@@ -77,9 +78,10 @@ export default function HomeScreen() {
       </SafeAreaView>
 
       {/* Adding Chapters/Clubs cards */}
+      
       <View style={{ flex: 1, justifyContent: 'center', marginTop: ios ? 2 : 0 }}>
         <Carousel
-          data={filteredCoffeeItems}
+          data={filteredClubItems}
           renderItem={({ item }) => <ChapterCard item={item} />}
           firstItem={1}
           loop={true}

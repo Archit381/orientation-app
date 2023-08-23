@@ -4,10 +4,8 @@ import { useNavigation } from '@react-navigation/native'
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ArrowLeftCircleIcon, MinusIcon, PlusIcon } from 'react-native-heroicons/outline';
-import { HeartIcon, StarIcon } from 'react-native-heroicons/solid';
 import { themeColors } from '../theme';
-import { ShoppingBag } from 'react-native-feather';
-import { categories, coffeeItems } from '../constants';
+import {clubItems } from '../constants';
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
 
@@ -66,32 +64,70 @@ export default function FavouriteScreen(props) {
         </View>
 
         <View className="px-4 space-y-2">
-          <Text style={{color: themeColors.text}} className="text-lg font-bold">About Us</Text>
+          <Text style={{fontSize: 20,color: themeColors.text}} className="text-lg font-bold">About Us</Text>
           <Text className="text-gray-600">
             {item.desc}
           </Text>
         </View>
+
+        <View className="px-4 space-y-2">
+          <Text style={{fontSize: 20,color: themeColors.text}} className="text-lg font-bold">Our Vision</Text>
+          <Text className="text-gray-600">
+            {item.vis}
+          </Text>
+        </View>
+
+        <View className="px-4 py-54 space-y-4">
+          <Text style={{fontSize: 30,color: themeColors.text}} className="text-lg font-bold">Gallery</Text>  
+        </View>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <Image             
+              source={item.img1}
+              style={{ width: 200, height: 200, marginRight: 12,marginLeft: 18, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
+          />
+          
+          <Image
+              source={item.img2}
+              style={{ width: 200, height: 200, marginRight: 12, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
+          />
+          <Image       
+              source={item.img3}
+              style={{ width: 200, height: 200, marginRight: 12, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}} 
+          />
+        </ScrollView>
+        <View className="px-4 py-54 space-y-4">
+          <Text style={{fontSize: 30,color: themeColors.text}} className="text-lg font-bold">Members</Text>  
+        </View>
+        <View className={'px-4 flex-row'}>
+          <View className={'px-4'}>
+            <Image 
+                source={item.chair}
+                style={{width: 100, height: 100, borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
+            <Text className="text-gray-600 px-10">{item.cname}</Text>    
+            <Text className="text-black-600 font-bold px-11">Chairperson</Text>
+          </View>
+          <View className={'px-4'}>
+          <Image 
+              source={item.vc}
+              style={{width: 100, height: 100, borderRadius: 50,marginLeft: 30, marginBottom: 10,}}/>
+            <Text className="text-gray-600 px-7">{item.vname}</Text>    
+            <Text className="text-black-600 font-bold px-6">Vice-Chairperson</Text>
+          </View>
+        </View>
+         
         
         
       </SafeAreaView>
       <View className="px-4 space-y-2">
           <Text style={{color: themeColors.text}} className="text-lg font-bold">Catch the latest updates, follow us!</Text>
-          
 
-          
         </View>
       <View className={`space-y-3 ${ios? 'mb-6': 'mb-3'}`}>
           <View className="flex-row justify-between items-center px-4 mb-2">
-              <View className="flex-row items-center space-x-1">
-                
+              <View className="flex-row items-center space-x-1">               
               </View>
-
           </View>
-
-        
         </View>
-        
-      
     </View>
     </ScrollView>
   )
