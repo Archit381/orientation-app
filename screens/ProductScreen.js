@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, Dimensions,StyleSheet, Platform,ScrollView } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Dimensions,StyleSheet, Platform,ScrollView, Linking } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { StatusBar } from 'expo-status-bar';
@@ -77,7 +77,7 @@ export default function FavouriteScreen(props) {
           </Text>
         </View>
 
-        <View className="px-4 py-54 space-y-4">
+        <View className="px-4 py-5 space-y-4">
           <Text style={{fontSize: 30,color: themeColors.text}} className="text-lg font-bold">Gallery</Text>  
         </View>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -85,7 +85,6 @@ export default function FavouriteScreen(props) {
               source={item.img1}
               style={{ width: 200, height: 200, marginRight: 12,marginLeft: 18, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
           />
-          
           <Image
               source={item.img2}
               style={{ width: 200, height: 200, marginRight: 12, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
@@ -95,7 +94,7 @@ export default function FavouriteScreen(props) {
               style={{ width: 200, height: 200, marginRight: 12, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}} 
           />
         </ScrollView>
-        <View className="px-4 py-54 space-y-4">
+        <View className="px-4 py-5 space-y-4">
           <Text style={{fontSize: 30,color: themeColors.text}} className="text-lg font-bold">Members</Text>  
         </View>
         <View className={'px-4 flex-row'}>
@@ -118,10 +117,34 @@ export default function FavouriteScreen(props) {
         
         
       </SafeAreaView>
-      <View className="px-4 space-y-2">
+      <View className="px-4 py-7 space-y-2">
           <Text style={{color: themeColors.text}} className="text-lg font-bold">Catch the latest updates, follow us!</Text>
-
-        </View>
+      </View>
+      <View className={'px-4 flex-row'}>
+        <TouchableOpacity>
+        <Image 
+            source={require('../assets/icons/whats.png')}
+            style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <Image 
+            source={require('../assets/icons/webs.png')}
+            style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          
+        <Image 
+            source={require('../assets/icons/inst.png')}
+            style={{width: 50, height: 50 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -5}}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          
+        <Image 
+            source={require('../assets/icons/mail.png')}
+            style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -2}}/>
+        </TouchableOpacity>
+        
+      </View>
       <View className={`space-y-3 ${ios? 'mb-6': 'mb-3'}`}>
           <View className="flex-row justify-between items-center px-4 mb-2">
               <View className="flex-row items-center space-x-1">               
