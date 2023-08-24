@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.archit381.appui"
     },
     "web": {
       "favicon": "./assets/images/uni_favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1f019947-b01a-451d-9998-e5229bc29f35"
+      }
     }
   }
 }
