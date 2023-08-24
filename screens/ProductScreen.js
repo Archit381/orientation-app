@@ -137,8 +137,8 @@ export default function FavouriteScreen(props) {
             source={require('../assets/icons/inst.png')}
             style={{width: 50, height: 50 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -5}}/>
         </TouchableOpacity>
+
         <TouchableOpacity>
-          
         <Image 
             source={require('../assets/icons/mail.png')}
             style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -2}}/>
