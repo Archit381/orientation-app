@@ -10,7 +10,7 @@ const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
 
 
-export default function FavouriteScreen(props) {
+export default function DetailScreen(props) {
   const item = props.route.params;
   const [size, setSize] = useState('small');
   const navigation = useNavigation();

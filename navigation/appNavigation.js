@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
 import { LogBox, Platform, View } from 'react-native';
-import ProductScreen from '../screens/ProductScreen';
+import DetailScreen from '../screens/DetailScreen';
 import SearchScreen from '../screens/SearchScreen';
 import AboutScreen from '../screens/AboutScreen';
 import { themeColors } from '../theme';
@@ -25,9 +25,10 @@ export default function AppNavigation() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
         contentStyle: {backgroundColor: 'transparent'}
+        
       }}>
         <Stack.Screen name="Home" options={{headerShown: false}} component={HomeTabs} />
-        <Stack.Screen name="Product" options={{headerShown: false}} component={ProductScreen} />
+        <Stack.Screen name="Product" options={{headerShown: false}} component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
