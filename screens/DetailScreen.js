@@ -122,27 +122,27 @@ export default function DetailScreen(props) {
       </View>
       <View className={'px-4 flex-row'}>
 
-        <TouchableOpacity onPress={() => Linking.openURL(item.insta)}>
+        <TouchableOpacity onPress={() => item.wp==="none" ? null : Linking.openURL(item.wp)}>
         <Image 
             source={require('../assets/icons/whats.png')}
             style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => Linking.openURL(item.web)}>
+        <TouchableOpacity onPress={() => item.web==="none" ? null : Linking.openURL(item.web)}>
         <Image 
             source={require('../assets/icons/webs.png')}
             style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => Linking.openURL(item.insta)}>
+        <TouchableOpacity onPress={() => item.insta==="none" ? null : Linking.openURL(item.insta)}>
         <Image 
             source={require('../assets/icons/inst.png')}
             style={{width: 50, height: 50 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -5}}/>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => Linking.openURL(item.insta)}>
+        <TouchableOpacity onPress={() => item.lk==="none" ? null : Linking.openURL(item.lk)}>
         <Image 
-            source={require('../assets/icons/mail.png')}
+            source={require('../assets/icons/linkedin.png')}
             style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -2}}/>
         </TouchableOpacity>
         
