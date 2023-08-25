@@ -82,7 +82,7 @@ export default function DetailScreen(props) {
         </View>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Image             
-              source={{uri: 'https://i.ibb.co/gZMjnn3/alt.jpg'}}
+              source={item.img1}
               style={{ width: 200, height: 200, marginRight: 12,marginLeft: 18, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
           />
           <Image
@@ -100,14 +100,14 @@ export default function DetailScreen(props) {
         <View className={'px-4 flex-row'}>
           <View className={'px-4'}>
             <Image 
-                source={item.chair}
+                source={{uri: item.chair}}
                 style={{width: 100, height: 100, borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
             <Text className="text-gray-600 px-10">{item.cname}</Text>    
             <Text className="text-black-600 font-bold px-11">Chairperson</Text>
           </View>
           <View className={'px-4'}>
           <Image 
-              source={item.vc}
+              source={{uri: item.vc}}
               style={{width: 100, height: 100, borderRadius: 50,marginLeft: 30, marginBottom: 10,}}/>
             <Text className="text-gray-600 px-7">{item.vname}</Text>    
             <Text className="text-black-600 font-bold px-6">Vice-Chairperson</Text>

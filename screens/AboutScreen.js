@@ -3,8 +3,7 @@ import { StyleSheet,TouchableOpacity, Text, View, ScrollView, Image } from 'reac
 import { ArrowLeftCircleIcon, MinusIcon, PlusIcon } from 'react-native-heroicons/outline';
 
 import bannerImage from '../assets/AboutUsBanner.png';
-import salikImage from '../assets/team/dev1.png';
-import architImage from '../assets/team/dev2.jpg';
+
 
 const AboutScreen = () => {
   return (
@@ -35,7 +34,7 @@ const AboutScreen = () => {
         
         {/* Display Salik Uddin's image */}
         <View style={styles.teamMember}>
-          <Image source={salikImage} style={styles.profileImage} />
+          <Image source={{uri: 'https://i.postimg.cc/9wQj7wpV/dev1.png'}} style={styles.profileImage} />
           <Text>Salik Uddin</Text>
           <Text>Chairperson</Text>
           <Text>E21CSEU0428@bennett.edu.in</Text>
@@ -43,7 +42,7 @@ const AboutScreen = () => {
         
         {/* Display Archit Ojha's image */}
         <View style={styles.teamMember}>
-          <Image source={architImage} style={styles.profileImage} />
+          <Image source={{uri: 'https://i.postimg.cc/67CwJXqs/dev2.jpg'}} style={styles.profileImage} />
           <Text>Archit Ojha</Text>
           <Text>Technical Head</Text>
           <Text>E22CSEU0468@bennett.edu.in</Text>
