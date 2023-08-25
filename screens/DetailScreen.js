@@ -82,7 +82,7 @@ export default function DetailScreen(props) {
         </View>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Image             
-              source={item.img1}
+              source={{uri: 'https://i.ibb.co/gZMjnn3/alt.jpg'}}
               style={{ width: 200, height: 200, marginRight: 12,marginLeft: 18, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
           />
           <Image

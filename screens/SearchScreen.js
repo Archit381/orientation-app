@@ -50,7 +50,7 @@ export default function SearchScreen() {
             <Image source={item.image} style={styles.clubLogo} />
             <Text style={styles.resultTitle}>{item.name}</Text> 
           </View>
-        </TouchableOpacity>  
+        </TouchableOpacity>
         )}
         keyExtractor={item => item.id.toString()}
         ListEmptyComponent={() => (
