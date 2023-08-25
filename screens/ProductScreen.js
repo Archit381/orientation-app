@@ -121,24 +121,26 @@ export default function FavouriteScreen(props) {
           <Text style={{color: themeColors.text}} className="text-lg font-bold">Catch the latest updates, follow us!</Text>
       </View>
       <View className={'px-4 flex-row'}>
-        <TouchableOpacity>
+
+        <TouchableOpacity onPress={() => Linking.openURL(item.insta)}>
         <Image 
             source={require('../assets/icons/whats.png')}
             style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
         </TouchableOpacity>
-        <TouchableOpacity>
+
+        <TouchableOpacity onPress={() => Linking.openURL(item.web)}>
         <Image 
             source={require('../assets/icons/webs.png')}
             style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
         </TouchableOpacity>
-        <TouchableOpacity>
-          
+
+        <TouchableOpacity onPress={() => Linking.openURL(item.insta)}>
         <Image 
             source={require('../assets/icons/inst.png')}
             style={{width: 50, height: 50 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -5}}/>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL(item.insta)}>
         <Image 
             source={require('../assets/icons/mail.png')}
             style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -2}}/>

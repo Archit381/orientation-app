@@ -3,8 +3,8 @@ import { StyleSheet,TouchableOpacity, Text, View, ScrollView, Image } from 'reac
 import { ArrowLeftCircleIcon, MinusIcon, PlusIcon } from 'react-native-heroicons/outline';
 
 import bannerImage from '../assets/AboutUsBanner.png';
-import salikImage from '../assets/salik.png';
-import architImage from '../assets/archit1.jpg';
+import salikImage from '../assets/team/dev1.png';
+import architImage from '../assets/team/dev2.jpg';
 
 const AboutScreen = () => {
   return (
