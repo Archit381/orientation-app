@@ -4,10 +4,10 @@
     "slug": "app-ui",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/uni_logo.png",
+    "icon": "./assets/images/applogo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/icon.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.archit381.appui"
     },
     "android": {
       "adaptiveIcon": {
