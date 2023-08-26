@@ -74,23 +74,23 @@ export default function DetailScreen(props) {
             <Text style={{ color: themeColors.text, fontSize: 24, fontWeight: 'bold' }}>{item.name}</Text>
           
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginVertical: 16 }}>
-              <View style={{ backgroundColor: item.accent, padding: 10, paddingHorizontal: 16, borderRadius: 30 }}>
+              <View style={{ backgroundColor: item.accent, padding: 10, paddingHorizontal: 20, borderRadius: 30 }}>
                 <Text style={{ color: 'white' }}>{item.stacks1}</Text>
               </View>
-              <View style={{ backgroundColor: item.accent, padding: 10, paddingHorizontal: 16, borderRadius: 30 }}>
+              <View style={{ backgroundColor: item.accent, padding: 10, paddingHorizontal: 20, borderRadius: 30 }}>
                 <Text style={{ color: 'white' }}>{item.stacks2}</Text>
               </View>
-              <View style={{ backgroundColor: item.accent, padding: 10, paddingHorizontal: 16, borderRadius: 30 }}>
+              <View style={{ backgroundColor: item.accent, padding: 10, paddingHorizontal: 20, borderRadius: 30 }}>
                 <Text style={{ color: 'white' }}>{item.stacks3}</Text>
               </View>
           </View>
           <View style={{ marginBottom: 16 }}>
             <Text style={{ color: themeColors.text, fontSize: 20, fontWeight: 'bold' }}>About Us</Text>
-            <Text style={{ color: 'gray' }}>{item.desc}</Text>
+            <Text style={{ color: 'gray' , marginTop: 10}}>{item.desc}</Text>
           </View>
           <View style={{ marginBottom: 16 }}>
             <Text style={{ color: themeColors.text, fontSize: 20, fontWeight: 'bold' }}>Our Vision</Text>
-            <Text style={{ color: 'gray' }}>{item.vis}</Text>
+            <Text style={{ color: 'gray', marginTop: 10 }}>{item.vis}</Text>
           </View>
           <View style={{ marginBottom: 16 }}>
             <Text style={{ color: themeColors.text, fontSize: 30, fontWeight: 'bold' }}>Gallery</Text>
@@ -134,11 +134,11 @@ export default function DetailScreen(props) {
               />
             </TouchableOpacity>
           </ScrollView>
-          <View style={{ marginBottom: 16 }}>
+          <View style={{ marginBottom: 16,marginTop: 10}}>
             <Text style={{ color: themeColors.text, fontSize: 30, fontWeight: 'bold' }}>Members</Text>
           </View>
-          <View style={{ flexDirection: 'row', paddingHorizontal: 16 }}>
-            <View style={{ paddingHorizontal: 16 }}>
+          <View className={'flex-row justify-between px-6'}>
+            <View style={{ paddingHorizontal: 23 }}>
               <Image
                 source={{ uri: item.chair }}
                 style={{ width: 100, height: 100, borderRadius: 50, marginBottom: 10 }}
@@ -146,7 +146,7 @@ export default function DetailScreen(props) {
               <Text style={{ color: 'gray', paddingHorizontal: 10 }}>{item.cname}</Text>
               <Text style={{ color: 'black', fontWeight: 'bold', paddingHorizontal: 11 }}>Chairperson</Text>
             </View>
-            <View style={{ paddingHorizontal: 16 }}>
+            <View className={'justify-between px-2'}>
               <TouchableOpacity onPress={() => openImageModal({uri: item.vc})}>
               <Image
                 source={{ uri: item.vc }}
@@ -154,7 +154,7 @@ export default function DetailScreen(props) {
               />
               </TouchableOpacity>
               <Text style={{ color: 'gray', paddingHorizontal: 7 }}>{item.vname}</Text>
-              <Text style={{ color: 'black', fontWeight: 'bold', paddingHorizontal: 6 }}>Vice-Chairperson</Text>
+              <Text style={{ color: 'black', fontWeight: 'bold', paddingHorizontal: 0 }}>Vice-Chairperson</Text>
             </View>
           </View>
            
