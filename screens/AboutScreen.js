@@ -18,8 +18,10 @@ const ITEM_HEIGHT = ITEM_WIDTH * 1.47;
 const ios = Platform.OS == 'ios';
 
 const images = [
-  'https://i.postimg.cc/nL5JbxM0/5.png',
-  'https://i.postimg.cc/bY5zcQSq/4.png',
+  'https://i.postimg.cc/9F2N1HT3/Kitchen-Kourier.png',
+  'https://i.postimg.cc/65bTcYZK/nischal.png',
+  'https://i.postimg.cc/Y2Ys1Cvf/4.png',
+  'https://i.postimg.cc/KjPpFJ6s/3.png',
   
 ];
 const data = images.map((image, index) => ({
@@ -34,7 +36,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar/>
       <SafeAreaView style={ios ? { marginBottom: -8 } : {}}>
-      <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black',marginLeft: 15, marginTop: 15 }}>About this App</Text>
+      <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black',marginLeft: 15, marginTop: 15 }}>Our Other Projects</Text>
       <Animated.FlatList
         data={data}
         keyExtractor={item=>item.key}
