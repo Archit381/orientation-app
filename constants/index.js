@@ -370,7 +370,7 @@ export const clubItems = [
     image: require('../assets/logos/wie.png'),
     desc: "IEEE Women in Engineering (IEEE WIE) is a global influencer, reshaping tech's image and promoting gender diversity. Committed to empowering women across their tech journey, spanning 125 countries, our 40,000+ member-strong community champions global progress for women in engineering and technology.",
     vis: 'IEEE Women in Engineering (IEEE WIE) envisions empowering women in technical fields worldwide. Our chapter fosters inclusivity, advocates for women in leadership, and promotes diversity through technical conferences, amplifying every voice.',
-    cname: 'Rameshwari Vadhvani',
+    cname: 'Rameshwari',
     vname: 'Yashswi Shukla',
     chair: 'https://i.postimg.cc/NL778phX/wie.jpg',
     vc: 'https://i.postimg.cc/NKV1GnX3/wiev.png',
