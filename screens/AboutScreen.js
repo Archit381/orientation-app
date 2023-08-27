@@ -4,13 +4,15 @@ import {
   Dimensions,
   Image,
   FlatList,
-  Text,
+  Text,  
   View,
+  TouchableOpacity,
   StyleSheet,
+  Linking,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
-
+import { themeColors } from '../theme';
 
 const { width, height } = Dimensions.get('screen');
 const ITEM_WIDTH = width * 0.86;
@@ -18,25 +20,19 @@ const ITEM_HEIGHT = ITEM_WIDTH * 1.47;
 const ios = Platform.OS == 'ios';
 
 const images = [
-  'https://i.postimg.cc/9F2N1HT3/Kitchen-Kourier.png',
-  'https://i.postimg.cc/65bTcYZK/nischal.png',
-  'https://i.postimg.cc/Y2Ys1Cvf/4.png',
-  'https://i.postimg.cc/KjPpFJ6s/3.png',
+  'https://i.postimg.cc/nL5JbxM0/5.png',
+  'https://i.postimg.cc/bY5zcQSq/4.png',
   
 ];
-const data = images.map((image, index) => ({
-  key: String(index),
-  photo: image,
-}));
 
 export default function App() {
-  const scrollX=React.useRef(new Animated.Value(0)).current;
+  const scrollX = React.useRef(new Animated.Value(0)).current;
 
   return (
     <View style={styles.container}>
-      <StatusBar/>
+      <StatusBar />
       <SafeAreaView style={ios ? { marginBottom: -8 } : {}}>
-      <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black',marginLeft: 15, marginTop: 15 }}>Our Other Projects</Text>
+      <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black',marginLeft: 15, marginTop: 15 }}>About this App</Text>
       <Animated.FlatList
         data={data}
         keyExtractor={item=>item.key}
@@ -112,6 +108,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 100,
+    marginBottom: 25,
   },
 });
