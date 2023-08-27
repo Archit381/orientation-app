@@ -11,9 +11,9 @@ import { MagnifyingGlassIcon, ArchiveBoxIcon } from 'react-native-heroicons/outl
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {HomeIcon as HomeOutline, ShoppingBagIcon as BagOutline } from 'react-native-heroicons/outline';
 import {HomeIcon as HomeSolid, ShoppingBagIcon as BagSolid, DocumentMagnifyingGlassIcon} from 'react-native-heroicons/solid';
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 
-
-const Stack = createNativeStackNavigator();
+const Stack = createSharedElementStackNavigator();
 const Tab = createBottomTabNavigator();
 const ios = Platform.OS == 'ios';
 LogBox.ignoreLogs([
