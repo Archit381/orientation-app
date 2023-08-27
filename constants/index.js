@@ -56,7 +56,7 @@ export const clubItems = [
     img3: require('../assets/events/soon.png')},
   {
     id: 2,
-    name: 'Mobilion',
+    name: 'Mobilon',
     tag1: 'programming',
     tag2: 'technology',
     tag3: 'development',
