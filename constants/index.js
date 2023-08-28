@@ -78,7 +78,7 @@ export const clubItems = [
     desc: "Mobilion isn't just a club, we're a community of tech lovers. From mobile apps to AI, VR, and gaming, we explore it all. We bring beginners and pros together to learn, create, and make app dreams come true.",
     vis: "We aim to build apps for real-world impact, not just campus use. Mobilion promotes mobile development for all, emphasizing hands-on learning. We foster teamwork through hackathons and coding challenges, fueling innovation and skill growth.",
     wp: 'https://chat.whatsapp.com/JcF7cYIX8GyAGsz98SYVjF',
-    insta: 'none',
+    insta: 'https://www.instagram.com/mobilon_bu/',
     web: 'none',
     lk: 'none',
     pic: 'no',

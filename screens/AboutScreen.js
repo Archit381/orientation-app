@@ -120,13 +120,7 @@ export default function App() {
                     borderRadius: 18,
                     borderWidth: 10,
                     borderColor: 'transparent',
-                    shadowColor: '#000',
-                    shadowOpacity: 0.5,
-                    shadowRadius: 30,
-                    shadowOffset: {
-                      width: 0,
-                      height: 0,
-                    },
+                    
                     borderRadius: 18,
                     padding: 12,
                     backgroundColor: 'transparent',
