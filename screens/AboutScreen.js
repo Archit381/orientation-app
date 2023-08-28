@@ -75,7 +75,7 @@ export default function App() {
           }}
         >
           <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black' }}>
-            More about us
+            About Mobilon
           </Text>
           <TouchableOpacity
             onPress={() =>
@@ -88,7 +88,6 @@ export default function App() {
                 borderRadius: 30,
                 width: 80,
                 height: 50,
-                // tintColor: themeColors.bggray,
               }}
             />
           </TouchableOpacity>
