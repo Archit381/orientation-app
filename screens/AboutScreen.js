@@ -23,7 +23,7 @@ const data = [
   {
     key: '0',
     photo: 'https://i.postimg.cc/x1jFSKg6/1.png',
-    text: 'Join our club and get to interact with Apple Representatives! Our club in collaboration with Apple and lets you attend exclusive workshops.',
+    text: 'Join our club and get to interact with Apple Representatives! Our club in collaboration with Apple, lets you attend exclusive workshops.',
   },
   {
     key: '1',
@@ -33,7 +33,7 @@ const data = [
   {
     key: '2',
     photo: 'https://i.postimg.cc/tgwrP8bc/3.png',
-    text: 'Show us your Technical writing and creative writing. Gather experience by writing technical blogs and content for our apps.',
+    text: 'Show us your technical writing and creative writing skills. Gather experience by writing technical blogs and content for our apps.',
   },
   {
     key: '3',
@@ -53,7 +53,7 @@ const data = [
   {
     key: '6',
     photo: 'https://i.postimg.cc/htF00HYF/game-2.png',
-    text: 'Cube Bounce: Explore diverse technologies like Gaming, AR/VR, Blockchain, creating full-stack apps.',
+    text: 'Cube Bounce: Experiment with technologies like Gaming, AR/VR, Blockchain and many more, creating full-stack apps.',
   },
 
 ];
@@ -65,26 +65,37 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar />
       <SafeAreaView style={ios ? { marginBottom: -8 } : {}}>
-        <View className=" flex-row justify-between items-center px-4 ">
-          <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black', marginLeft: 15, marginTop: 15 }}>More about us</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingHorizontal: 16,
+            paddingTop: 15,
+          }}
+        >
+          <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black' }}>
+            More about us
+          </Text>
           <TouchableOpacity
-            onPress={() => Linking.openURL('https://chat.whatsapp.com/JcF7cYIX8GyAGsz98SYVjF')}
+            onPress={() =>
+              Linking.openURL('https://chat.whatsapp.com/JcF7cYIX8GyAGsz98SYVjF')
+            }
           >
-          <Image source={require('../assets/images/joinBTN.png')}
-            style={{
-              borderRadius: 30,
-              width: 80,
-              height: 50,
-              tintColor: themeColors.bggray,
-              marginTop:20,
-            }}>
-          </Image>
+            <Image
+              source={require('../assets/images/joinBTN.png')}
+              style={{
+                borderRadius: 30,
+                width: 80,
+                height: 50,
+                // tintColor: themeColors.bggray,
+              }}
+            />
           </TouchableOpacity>
         </View>
-        <Text className={'-top-9 font-bold '} style={{marginLeft: 355}}>Join Us</Text>
         <Animated.FlatList
           data={data}
-          keyExtractor={item => item.key}
+          keyExtractor={(item) => item.key}
           horizontal
           showsHorizontalScrollIndicator={false}
           pagingEnabled
@@ -96,36 +107,40 @@ export default function App() {
             const inputRange = [
               (index - 1) * width,
               index * width,
-              (index + 1) * width
+              (index + 1) * width,
             ];
             const translateX = scrollX.interpolate({
               inputRange,
-              outputRange: [-width * 0.7, 0, width * 0.7]
+              outputRange: [-width * 0.7, 0, width * 0.7],
             });
             return (
               <View style={{ width, justifyContent: 'center', alignItems: 'center' }}>
-                <View style={{
-                  borderRadius: 18,
-                  borderWidth: 10,
-                  borderColor: 'transparent',
-                  shadowColor: '#000',
-                  shadowOpacity: 0.5,
-                  shadowRadius: 30,
-                  shadowOffset: {
-                    width: 0,
-                    height: 0,
-                  },
-                  borderRadius: 18,
-                  padding: 12,
-                  backgroundColor: 'transparent'
-                }}>
-                  <View style={{
-                    width: ITEM_WIDTH,
-                    height: ITEM_HEIGHT,
-                    overflow: 'hidden',
-                    alignItems: 'center',
-                    borderRadius: 14,
-                  }}>
+                <View
+                  style={{
+                    borderRadius: 18,
+                    borderWidth: 10,
+                    borderColor: 'transparent',
+                    shadowColor: '#000',
+                    shadowOpacity: 0.5,
+                    shadowRadius: 30,
+                    shadowOffset: {
+                      width: 0,
+                      height: 0,
+                    },
+                    borderRadius: 18,
+                    padding: 12,
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  <View
+                    style={{
+                      width: ITEM_WIDTH,
+                      height: ITEM_HEIGHT,
+                      overflow: 'hidden',
+                      alignItems: 'center',
+                      borderRadius: 14,
+                    }}
+                  >
                     <Animated.Image
                       source={{ uri: item.photo }}
                       style={{
@@ -134,17 +149,20 @@ export default function App() {
                         resizeMode: 'cover',
                         transform: [
                           {
-                            translateX
-                          }
-                        ]
+                            translateX,
+                          },
+                        ],
                       }}
                     />
                   </View>
-                  <Text className={'font-bold'} style={{ fontSize: 18, marginTop: 10, alignContent: 'center' }}>{item.text}</Text>
+                  <Text style={{ fontSize: 18, marginTop: 10, alignContent: 'center', fontWeight: 'bold' }}>
+                    {item.text}
+                  </Text>
                 </View>
               </View>
             );
-          }} />
+          }}
+        />
       </SafeAreaView>
     </View>
   );
