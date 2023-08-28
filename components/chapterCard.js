@@ -40,7 +40,7 @@ function ChapterCard({item}) {
             }} className="flex-row  items-center space-x-10 mb-5">
               <Text className="px-4 text-black font-bold text-lg" >Learn More</Text>
               <TouchableOpacity 
-              onPress={()=> navigation.navigate('Product', {...item})}
+              onPress={()=> navigation.navigate('Details', {...item})}
               style={{
                 
               }} className="p-4 bg-white rounded-full">
