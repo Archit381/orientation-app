@@ -34,7 +34,7 @@ export default function App() {
       <SafeAreaView style={ios ? { marginBottom: -8 } : {}}>
       <Text style={{ fontSize: 40, fontWeight: 'bold', color: 'black',marginLeft: 15, marginTop: 15 }}>About this App</Text>
       <Animated.FlatList
-        data={data}
+        data={images}
         keyExtractor={item=>item.key}
         horizontal
         showsHorizontalScrollIndicator={false}
