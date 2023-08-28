@@ -1,10 +1,11 @@
-import { View, Text, TouchableOpacity, Image, Dimensions,StyleSheet, Platform,ScrollView, Linking } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Dimensions,StyleSheet, Modal, Platform,ScrollView, Linking } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ArrowLeftCircleIcon, MinusIcon, PlusIcon } from 'react-native-heroicons/outline';
 import { themeColors } from '../theme';
+
 import {clubItems } from '../constants';
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
@@ -14,6 +15,32 @@ export default function DetailScreen(props) {
   const item = props.route.params;
   const [size, setSize] = useState('small');
   const navigation = useNavigation();
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const renderSocialMediaButton = (url, iconSource) => {
+    if (url !== 'none') {
+      return (
+        <TouchableOpacity onPress={() => Linking.openURL(url)}>
+          <Image
+            source={iconSource}
+            style={{width: 50, height: 50 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -5}}/>
+        </TouchableOpacity>
+      );
+    }
+    return null; 
+  };
+
+  const openModal = (imageSource) => {
+    setSelectedImage(imageSource);
+  };
+  
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+  
+
+
+
   return (
     <ScrollView style={styles.container} >
     <View className="flex-1">
@@ -46,6 +73,7 @@ export default function DetailScreen(props) {
             
             
         </View>
+
         <View className="px-4 space-y-2">
           <View className="flex-row justify-between">
             <View style={{backgroundColor: item.accent}} 
@@ -81,34 +109,44 @@ export default function DetailScreen(props) {
           <Text style={{fontSize: 30,color: themeColors.text}} className="text-lg font-bold">Gallery</Text>  
         </View>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        <TouchableOpacity onPress={() => openModal(item.img1)}>
           <Image             
               source={item.img1}
               style={{ width: 200, height: 200, marginRight: 12,marginLeft: 18, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
           />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => openModal(item.img2)}>
           <Image
               source={item.img2}
               style={{ width: 200, height: 200, marginRight: 12, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}}
           />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => openModal(item.img3)}>
           <Image       
               source={item.img3}
               style={{ width: 200, height: 200, marginRight: 12, borderRadius: 20, tintColor: item.pic ==='yes' ? '': item.accent}} 
           />
+          </TouchableOpacity>
         </ScrollView>
         <View className="px-4 py-5 space-y-4">
           <Text style={{fontSize: 30,color: themeColors.text}} className="text-lg font-bold">Members</Text>  
         </View>
         <View className={'px-4 flex-row'}>
           <View className={'px-4'}>
+          <TouchableOpacity onPress={() => openModal({uri: item.chair})}>
             <Image 
                 source={{uri: item.chair}}
                 style={{width: 100, height: 100, borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
+                </TouchableOpacity>
             <Text className="text-gray-600 px-10">{item.cname}</Text>    
             <Text className="text-black-600 font-bold px-11">Chairperson</Text>
           </View>
           <View className={'px-4'}>
+          <TouchableOpacity onPress={() => openModal({uri: item.vc})}>
           <Image 
               source={{uri: item.vc}}
               style={{width: 100, height: 100, borderRadius: 50,marginLeft: 30, marginBottom: 10,}}/>
+              </TouchableOpacity>
             <Text className="text-gray-600 px-7">{item.vname}</Text>    
             <Text className="text-black-600 font-bold px-6">Vice-Chairperson</Text>
           </View>
@@ -117,44 +155,46 @@ export default function DetailScreen(props) {
         
         
       </SafeAreaView>
-      <View className="px-4 py-7 space-y-2">
-          <Text style={{color: themeColors.text}} className="text-lg font-bold">Catch the latest updates, follow us!</Text>
-      </View>
-      <View className={'px-4 flex-row'}>
 
-        <TouchableOpacity onPress={() => item.wp==="none" ? null : Linking.openURL(item.wp)}>
-        <Image 
-            source={require('../assets/icons/whats.png')}
-            style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => item.web==="none" ? null : Linking.openURL(item.web)}>
-        <Image 
-            source={require('../assets/icons/webs.png')}
-            style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,}}/>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => item.insta==="none" ? null : Linking.openURL(item.insta)}>
-        <Image 
-            source={require('../assets/icons/inst.png')}
-            style={{width: 50, height: 50 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -5}}/>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => item.lk==="none" ? null : Linking.openURL(item.lk)}>
-        <Image 
-            source={require('../assets/icons/linkedin.png')}
-            style={{width: 40, height: 40 , borderRadius: 50,marginLeft: 40, marginBottom: 10,marginTop: -2}}/>
-        </TouchableOpacity>
-        
-      </View>
-      <View className={`space-y-3 ${ios? 'mb-6': 'mb-3'}`}>
-          <View className="flex-row justify-between items-center px-4 mb-2">
-              <View className="flex-row items-center space-x-1">               
-              </View>
+      {selectedImage && (
+        <Modal visible={selectedImage !== null} transparent={true} animationType="slide">
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.9)' }}>
+            <TouchableOpacity onPress={closeModal} style={{ position: 'absolute', top: 20, right: 20, zIndex: 1 }}>
+              <Text style={{ color: 'white', fontSize: 24 }}>X</Text>
+            </TouchableOpacity>
+            <Image source={selectedImage} style={{ width: width - 40, height: height / 1.5 }} resizeMode="contain" />
           </View>
-        </View>
+        </Modal>
+      )}    
+
+
+
+
+
+
+      <View className="px-4 py-7 space-y-2">
+  <Text style={{ color: themeColors.text, fontSize: 20, fontWeight: 'bold' }}>
+    Catch the latest updates, follow us!
+  </Text>
+</View>
+<View className={'px-4 flex-row'}>
+    {renderSocialMediaButton(item.wp, require('../assets/icons/whats.png'))}
+    {renderSocialMediaButton(item.web, require('../assets/icons/webs.png'))}
+    {renderSocialMediaButton(item.insta, require('../assets/icons/inst.png'))}
+    {renderSocialMediaButton(item.lk, require('../assets/icons/linkedin.png'))}
+</View>
+<View className={`space-y-3 ${ios? 'mb-6': 'mb-3'}`}>
+          <View className="flex-row justify-between items-center px-4 mb-2">
+              <View className="flex-row items-center space-x-1">      
+    </View>
+  </View>
+</View>
+
     </View>
     </ScrollView>
+
+    
+
   )
 }
 const styles = StyleSheet.create({
