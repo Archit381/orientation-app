@@ -45,7 +45,7 @@ export default function SearchScreen() {
       <FlatList
         data={searchResults}
         renderItem={({ item }) => (
-        <TouchableOpacity onPress={() => navigation.navigate('Product', {...item})}>  
+        <TouchableOpacity onPress={() => navigation.navigate('Details', {...item})}>  
           <View style={styles.resultCard}>            
             <Image source={item.image} style={styles.clubLogo} />
             <Text style={styles.resultTitle}>{item.name}</Text> 
